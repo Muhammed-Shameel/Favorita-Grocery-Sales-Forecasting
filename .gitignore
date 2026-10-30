@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------------------
+# Environments & secrets
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+env/
+.env
+*.pem
+*.key
+
+# ---------------------------------------------------------------------------
+# Python caches & build artifacts
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# ---------------------------------------------------------------------------
+# IDE / editor / OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# Jupyter
+# ---------------------------------------------------------------------------
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# ---------------------------------------------------------------------------
+# Data (large raw + derived files; regenerate via the pipeline)
+#   - train.csv (116 MB) and features.parquet (161 MB) exceed GitHub's 100 MB limit
+#   - keep the folder structure with .gitkeep, ignore the payloads
+# ---------------------------------------------------------------------------
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.csv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+
+# ---------------------------------------------------------------------------
+# Model binaries (regeneratable; keep small *.json metadata tracked)
+# ---------------------------------------------------------------------------
+*.cbm
+*.joblib
+*.pkl
+*.pickle
+*.bin
+*.model
+
+# ---------------------------------------------------------------------------
+# Generated outputs / logs
+# ---------------------------------------------------------------------------
+outputs/*
+!outputs/.gitkeep
+logs/
+*.log
