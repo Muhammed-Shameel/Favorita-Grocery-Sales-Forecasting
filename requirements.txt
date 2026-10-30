@@ -1,3 +1,12 @@
+# Core data stack
 pandas
 numpy
-pathlib
+
+# Modeling
+catboost
+lightgbm
+scikit-learn
+
+# Serialization / IO
+pyarrow
+joblib
